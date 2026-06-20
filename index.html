@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diet Recommendation Tool (Student Project)</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="page-header">
+        <h1>Diet Recommendation Tool</h1>
+        <p class="tagline">Simple, non-medical diet guidance (student project)</p>
+    </header>
+
+    <main>
+        <section class="notice" aria-label="Important information">
+            <h2>Important notice</h2>
+            <p>
+                This tool is a student project and provides
+                <strong>non-medical</strong>, general diet guidance only.
+                It is <strong>not</strong> a substitute for professional
+                medical or dietary advice.
+            </p>
+        </section>
+
+        <section class="form-section" aria-label="Input form">
+            <h2>Your details</h2>
+            <form id="diet-form">
+                <div class="form-row">
+                    <label for="ageBand">Age band</label>
+                    <select id="ageBand" name="ageBand" required>
+                        <option value="">Select...</option>
+                        <option value="18-29">18–29</option>
+                        <option value="30-39">30–39</option>
+                        <option value="40-49">40–49</option>
+                        <option value="50-59">50–59</option>
+                        <option value="60+">60+</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="heightCm">Height (cm)</label>
+                    <input
+                        type="number"
+                        id="heightCm"
+                        name="heightCm"
+                        min="120"
+                        max="230"
+                        required
+                    />
+                </div>
+
+                <div class="form-row">
+                    <label for="weightKg">Weight (kg)</label>
+                    <input
+                        type="number"
+                        id="weightKg"
+                        name="weightKg"
+                        min="35"
+                        max="250"
+                        required
+                    />
+                </div>
+
+                <div class="form-row">
+                    <label for="activityLevel">Activity level</label>
+                    <select id="activityLevel" name="activityLevel" required>
+                        <option value="">Select...</option>
+                        <option value="sedentary">Sedentary (little or no exercise)</option>
+                        <option value="light">Light (1–3 days/week)</option>
+                        <option value="moderate">Moderate (3–5 days/week)</option>
+                        <option value="active">Active (6–7 days/week)</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="goal">Goal</label>
+                    <select id="goal" name="goal" required>
+                        <option value="">Select...</option>
+                        <option value="lose">Lose weight</option>
+                        <option value="maintain">Maintain weight</option>
+                        <option value="gain">Gain weight</option>
+                    </select>
+                </div>
+
+                <div class="form-row checkbox-row">
+                    <input
+                        type="checkbox"
+                        id="acceptTerms"
+                        name="acceptTerms"
+                        required
+                    />
+                    <label for="acceptTerms">
+                        I have read and understood the Terms and Conditions and I
+                        understand this is a non-medical student project tool.
+                    </label>
+                </div>
+
+                <button type="submit" class="primary-button">
+                    Get recommendation
+                </button>
+
+                <p id="form-error" class="error-message" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section
+            id="result-section"
+            class="result-section"
+            aria-label="Recommendation"
+            hidden
+        >
+            <h2>Your recommendation</h2>
+            <div id="result-content" class="result-content">
+                <!-- Filled by JavaScript -->
+            </div>
+        </section>
+
+        <section class="terms-summary" aria-label="Summary of terms">
+            <h2>Summary of Terms &amp; Conditions</h2>
+            <ul>
+                <li>This tool is for adults (18+) and for general wellbeing only.</li>
+                <li>It does not provide medical advice or diagnosis.</li>
+                <li>
+                    Your inputs (age band, height, weight, activity, goal) are used
+                    only to generate recommendations and to support this student project.
+                </li>
+            </ul>
+            <p class="small-text">
+                A full Terms &amp; Conditions document is available in the project
+                repository.
+            </p>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>Diet Recommendation Tool – TM470 student project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

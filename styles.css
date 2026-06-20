@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f7fa;
+    color: #222;
+}
+
+.page-header {
+    background: #154273;
+    color: #fff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin: 0;
+}
+
+.tagline {
+    margin-top: 0.3rem;
+    font-size: 0.95rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 0 1rem 2rem;
+}
+
+.notice,
+.form-section,
+.result-section,
+.terms-summary {
+    background: #fff;
+    border-radius: 6px;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.notice h2,
+.form-section h2,
+.result-section h2,
+.terms-summary h2 {
+    margin-top: 0;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.9rem;
+}
+
+.form-row label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.form-row input,
+.form-row select {
+    padding: 0.45rem 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.checkbox-row {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.checkbox-row input[type="checkbox"] {
+    margin-right: 0.5rem;
+    margin-top: 0.15rem;
+}
+
+.primary-button {
+    background: #154273;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: #0f3154;
+}
+
+.error-message {
+    color: #b00020;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.result-content {
+    border-top: 1px solid #e1e4ea;
+    padding-top: 0.8rem;
+}
+
+.result-content p {
+    margin: 0.3rem 0;
+}
+
+.small-text {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.page-footer {
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 1rem;
+    background: #e1e4ea;
+    color: #333;
+}
+
+@media (min-width: 700px) {
+    .form-row {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .form-row label {
+        flex: 0 0 220px;
+        margin-bottom: 0;
+    }
+
+    .form-row input,
+    .form-row select {
+        flex: 1;
+    }
+
+    .checkbox-row {
+        align-items: center;
+    }
+
+    .checkbox-row label {
+        flex: 1;
+    }
+}
